@@ -25,10 +25,10 @@ Things you may want to cover:
 # DB設計
 
 
-## userテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|username|string|null: false|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 ## Association
@@ -36,7 +36,7 @@ Things you may want to cover:
 - has_many :groups_users
 - has_many :groups, through: :groups_users
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
