@@ -1,13 +1,11 @@
 .wrapper
   .side_bar
-    .side_bar__user_name
-      .top_items
-        %b.name masa
-        .icon
-          .icon_edit
+    .LeftHeader
+      .LeftHeader__list
+        %b.LeftHeader__UserName masa
+        .LeftHeader__IconList
           =icon('far', 'edit')
-          .icon_cog
           =icon('fas', 'cog')
-    .side_bar__group_list
-      .group_name techcamp
-      .group_message まだメッセージがありません
+    .GroupList
+      .GroupList__GroupName techcamp
+      .GroupList__GroupMessage まだメッセージがありません

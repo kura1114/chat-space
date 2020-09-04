@@ -1,33 +1,33 @@
 .wrapper
   .main_chat
-    .main_chat__group_info
-      .profile
-        .profile_name techcamp
-        .profile_member Member: masa
-      .edit 
-        .edit_btn Edit 
-    .main_chat__message_list
-      .message_field
-        .message_box
-          .message_info
-            .message_info_userName masa
-            .message_info_date 2019/11/20(Wed) 17:43:01
+    .RightHeader
+      .RightHeader__GroupInfo
+        .GroupName techcamp
+        .GroupMember Member: masa
+      .RightHeader__GroupEdit 
+        .EditBtn Edit 
+    .MessageList
+      .MessageField
+        .MessageBox
+          .MessageInfo
+            .MessageInfo__UserName masa
+            .MessageInfo__date 2019/11/20(Wed) 17:43:01
           .message
-            %p.message_content おはよう！
-        .message_box
-          .message_info
-            .message_info_userName masa
-            .message_info_date 2019/11/20(Wed) 17:44:00
+            %p.message__MessageContent おはよう！
+        .MessageBox
+          .MessageInfo
+            .MessageInfo__UserName masa
+            .MessageInfo__date 2019/11/20(Wed) 17:44:00
           .message
-            .message_content aaaa
+            %p.message__MessageContent aaaa
 
-    .main_chat__message_form
+    .MessageForm
       %form.Form
         .form_contents
-          %input.form_input_content{type:"text",placeholder:"type a message"}
-          %label.form_input_image
+          %input.Form__InputContent{type:"text",placeholder:"type a message"}
+          %label.Form__InputImage
             =icon('fas', 'image')
             %input.Hidden{type:"file"}
-        %input.form_submit{type:"submit",value:"Send"}
+        %input.Form__submit{type:"submit",value:"Send"}
 
         
