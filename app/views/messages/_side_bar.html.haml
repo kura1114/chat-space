@@ -2,10 +2,14 @@
   .side_bar
     .LeftHeader
       .LeftHeader__list
-        %b.LeftHeader__UserName masa
-        .LeftHeader__IconList
-          =icon('far', 'edit')
-          =icon('fas', 'cog')
+        %b.LeftHeader__UserName
+          = current_user.name
+        .LeftHeader__iconList
+          .label-icon
+            = icon('fas', 'edit')
+          .label-icon
+            =link_to edit_user_path(current_user) do
+              = icon('fas', 'cog')
     .GroupList
-      .GroupList__GroupName techcamp
-      .GroupList__GroupMessage まだメッセージがありません
+      .GroupList__GroupName グループ名
+      .GroupList__GroupMessage 最新のメッセージ
