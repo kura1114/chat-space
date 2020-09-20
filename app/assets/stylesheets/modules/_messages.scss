@@ -26,7 +26,11 @@
           justify-content: center;
           color: #ffffff;
           text-decoration: none;
-          .label-icon{
+          .new_group_icon{
+            color: #ffffff;
+            padding-right: 5px;
+          }
+          .edit_icon{
             color: #ffffff;
           }
         }
@@ -36,15 +40,19 @@
       height: calc(100vh - 100px) ;
       background-color: #2f3e51;
       padding: 0 20px;
-      .GroupList__GroupName{
-        height: 35px;
-        font-size: 15px;
-        padding-top: 20px;
-      }
-      .GroupList__GroupMessage{
-        height: 56px;
-        font-size: 11px;
-        padding: 5px 0 40px 0;
+      .Group{
+        height: 100px;
+        color: #ffffff;
+        .GroupName{
+          height: 35px;
+          font-size: 15px;
+          padding-top: 20px;
+        }
+        .GroupMessage{
+          height: 56px;
+          font-size: 11px;
+          padding: 5px 0 5px 0;
+        }
       }
     }
   }
