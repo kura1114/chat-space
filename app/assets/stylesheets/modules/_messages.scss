@@ -40,18 +40,22 @@
       height: calc(100vh - 100px) ;
       background-color: #2f3e51;
       padding: 0 20px;
+      color: #ffffff;
       .Group{
         height: 100px;
         color: #ffffff;
+        text-decoration: none;
         .GroupName{
           height: 35px;
           font-size: 15px;
           padding-top: 20px;
+          color: #ffffff;
         }
         .GroupMessage{
           height: 56px;
           font-size: 11px;
           padding: 5px 0 5px 0;
+          color: #ffffff;
         }
       }
     }
@@ -63,30 +67,39 @@
       border-bottom: #eeeeee;
       display: flex;
       justify-content: space-between;
+      margin-left: 35px;
       &__GroupInfo{
-        margin: 35px 40px 0 40px;
+        text-decoration: none;
         .GroupName{
           font-size: 20px;
           color: #333333;
+          margin-top: 35px;
         }
-        .GroupMember{
+        .GroupMemberList{
           font-size: 12px;
           color: #999999;
+          list-style: none;
+          margin-top: 15px;
+          display: flex;
+          .GroupMember{
+            font-size: 12px;
+            color: #999999;
+            display: list-item;
+            padding-left: 5px;
+          }
         }
       }
-      &__GroupEdit{
-        height: 100px;
-        width: 72px;
+      .EditBtn{
+        height: 40px;
+        width: 30px;
         margin-right: 40px;
-        .EditBtn{
-          height: 40px;
-          margin-top: 28px;
-          padding: 0 20px;
-          border: solid 1px #38aef0;
-          font-size: 16px;
-          color: #38aef0;
-          line-height: 40px;
-        }
+        margin-top: 28px;
+        padding: 0 20px;
+        border: solid 1px #38aef0;
+        font-size: 16px;
+        color: #38aef0;
+        line-height: 40px;
+        text-decoration: none;
       }
     }
     .MessageList{
@@ -131,19 +144,19 @@
         width: calc(100% - 80px);
         display: flex;
 
-        .form_contents{
+        .Form__contents{
           width: calc(100% - 15px - 100px);
           display: flex;
           justify-content: center;
           align-items: center;
           position: relative;
-          .Form__InputContent{
+          .Form__inputContent{
             width: 100%;
             height: 100%;
             border: none;
             padding-left: 10px;
           }
-          .Form__InputImage{
+          .Form__inputImage{
             position: absolute;
             right: 10px;
             .Hidden{

@@ -2,32 +2,24 @@
   .main_chat
     .RightHeader
       .RightHeader__GroupInfo
-        .GroupName techcamp
-        .GroupMember Member: masa
-      .RightHeader__GroupEdit 
-        .EditBtn Edit
+        .GroupName
+          = @group.name
+        %ul{class: "GroupMemberList"} 
+          Member :
+          %li{class: "GroupMember"}
+          - @group.users.each do |user|
+            = user.name
+      = link_to "Edit", edit_group_path(@group), class: "EditBtn"
+    
     .MessageList
       .MessageField
-        .MessageBox
-          .MessageInfo
-            .MessageInfo__UserName masa
-            .MessageInfo__date 2019/11/20(Wed) 17:43:01
-          .message
-            %p.message__MessageContent おはよう！
-        .MessageBox
-          .MessageInfo
-            .MessageInfo__UserName masa
-            .MessageInfo__date 2019/11/20(Wed) 17:44:00
-          .message
-            %p.message__MessageContent aaaa
+        = render @messages
 
     .MessageForm
-      %form.Form
-        .form_contents
-          %input.Form__InputContent{type:"text",placeholder:"type a message"}
-          %label.Form__InputImage
-            =icon('fas', 'image')
-            %input.Hidden{type:"file"}
-        %input.Form__submit{type:"submit",value:"Send"}
-
-        
+      = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+        .Form__contents
+          = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+          = f.label :image, class: 'Form__inputImage' do
+            = icon('far', 'image', class: 'Form__icon')
+            = f.file_field :image, class: 'Hidden'
+        = f.submit 'Send', class: 'Form__submit'
