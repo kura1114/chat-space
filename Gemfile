@@ -32,6 +32,14 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 4.0.0.beta2'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'devise'
+  gem 'pry-rails'
+  gem 'carrierwave'
+  gem 'mini_magick'
 end
 
 group :development do
@@ -56,7 +64,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "haml-rails", ">=1.0", '<=2.0.1'
 gem 'font-awesome-sass'
 
-gem 'devise'
-gem 'pry-rails'
-gem 'carrierwave'
-gem 'mini_magick'
