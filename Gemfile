@@ -66,5 +66,6 @@ gem 'font-awesome-sass'
 gem 'jquery-rails'
 
 group :production do
+  gem 'devise'
   gem 'unicorn', '5.4.1'
 end
