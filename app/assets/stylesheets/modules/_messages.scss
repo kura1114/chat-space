@@ -109,6 +109,7 @@
         height: calc(100% - 35px);
         margin: 0 40px 0 40px ;
         padding-top: 35px;
+        overflow: scroll;
         .MessageBox{
           margin-bottom: 46px;
           .MessageInfo{
